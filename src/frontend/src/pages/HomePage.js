@@ -1,15 +1,10 @@
 import {React, useEffect, useState} from 'react'
-import { useParams, Link } from 'react-router-dom';
-import { MatchDetailCard } from '../components/MatchDetailCard';
-import { MatchSmallCard } from '../components/MatchSmallCard';
-import { PieChart } from 'react-minimal-pie-chart';
 import './HomePage.scss';
 import { TeamTile } from '../components/TeamTile';
 
 export const HomePage = () => {
 
   const [teams, setTeams] = useState([]);
-  const { teamName } = useParams();
  
     useEffect (
       () => {
@@ -33,7 +28,7 @@ export const HomePage = () => {
         <h1 className='app-name'>Kelvin Musau's IPL Dashboard</h1>
       </div>
     <div className='team-grid'>
-        { teams.map(team => <TeamTile teamName={team.teamName} />) }
+        { teams.map(team => <TeamTile key={team.id} teamName={team.teamName} />) }
     </div>
 
     </div>
