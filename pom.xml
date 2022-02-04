@@ -14,7 +14,7 @@
 	<name>Ipldashboard</name>
 	<description>Spring boot with react frontend for an IPL dashboard</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
